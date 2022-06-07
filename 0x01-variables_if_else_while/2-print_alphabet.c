@@ -1,15 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
-int main(void) {
-    char c;
+int main(void)
+{
+	char ch;
 
-    for (c = 'a'; c <= 'z'; ++c)
-        printf("%c ", c);
+	 for (ch= 'a'; ch<= 'z'; ch++)
+                  putchar(ch);
+                  putchar ('\n');
 
-    return (0);
+         return (0);
 }
