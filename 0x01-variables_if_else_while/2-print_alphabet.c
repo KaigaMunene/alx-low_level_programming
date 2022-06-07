@@ -14,8 +14,8 @@ char l;
 
 for (l = 'a'; l <= 'z'; l++)
 {
-    putchar(l);
-    putchar('\n');
+	putchar(l);
+	putchar('\n');
 }
-    return (0);
+	return (0);
 }
