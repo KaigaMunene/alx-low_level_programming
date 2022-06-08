@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * Description: It prints the alphabet in lowercase fallowed by a new line
- * Return: 0(success).
+ * print_alphabet: It prints the alphabet in lowercase fallowed by a new line
+ * Return: nothing
  */
-int main(void)
+void print_alphabet(void)
 {
 char l;
 
@@ -13,5 +13,4 @@ for (l = 'a'; l <= 'z'; l++)
 _putchar(l);
 }
 _putchar('\n');
-return (0);
 }
