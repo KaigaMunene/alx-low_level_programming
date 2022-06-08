@@ -1,33 +1,29 @@
 #include "main.h"
 
 /**
- * main - check the code.
+ * print_sign - Prints the positive or negative sign of the argument, if any
  *
- * Return: Always 0.
+ * @n:          Argument to check against for signs, if any
+ *
+ * Return:      (1) if @n is a positive number
+ *              (0) if @n is zero
+ *              (-1) if @n is a negative number
  */
-int main(void)
+int print_sign(int n)
 {
-int r;
-
-r = print_sign(98);
-_putchar(',');
-_putchar(' ');
-_putchar(r + '0');
-_putchar('\n');
-r = print_sign(0);
-_putchar(',');
-_putchar(' ');
-_putchar(r + '0');
-_putchar('\n');
-r = print_sign(0xff);
-_putchar(',');
-_putchar(' ');
-_putchar(r + '0');
-_putchar('\n');
-r = print_sign(-1);
-_putchar(',');
-_putchar(' ');
-_putchar(r + '0');
-_putchar('\n');
+if (n == 0)
+{
+_putchar('0');
 return (0);
+}
+else if (n > 0)
+{
+_putchar('+');
+return (1);
+}
+else
+{
+_putchar('-');
+return (-1);
+}
 }
