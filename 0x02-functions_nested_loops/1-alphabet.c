@@ -2,9 +2,9 @@
 
 /**
  * Description: It prints the alphabet in lowercase fallowed by a new line
- * Return: Nothing.
+ * Return: 0(success).
  */
-void print_alphabet(void)
+int main(void)
 {
 char l;
 
@@ -13,4 +13,5 @@ for (l = 'a'; l <= 'z'; l++)
 _putchar(l);
 }
 _putchar('\n');
+return (0);
 }
