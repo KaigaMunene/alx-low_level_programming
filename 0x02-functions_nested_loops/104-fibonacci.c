@@ -8,22 +8,20 @@
 
 int main(void)
 {
-	int i;
+int i;
+unsigned long int x, y, z;
+x = 1;
+y = 2;
 
-	unsigned long int x, y, z;
-	x = 1;
-	y = 2;
+printf("%lu, %lu", x, y);
+for (i = 0; i < 100; i++)
+{
+z = x + y;
+printf(", %lu", z);
+x = y;
+y = z;
+}
 
-	printf("%lu, %lu", x, y);
-	for (i = 0; i < 96; i++)
-	{
-		z = x + y;
-		printf(", %lu", z);
-		x = y;
-		y = z;
-	}
-
-
-	putchar('\n');
-	return (0);
+putchar('\n');
+return (0);
 }
