@@ -10,15 +10,5 @@
 int _isdigit(int c)
 {
 
-int digit = 0;
-int num;
-
-for (num = '0'; num < '9'; num++)
-{
-if (c == num)
-{
-digit = 1;
-}
-return (digit);
-}
+	return (c >= '0' && c <= '9');
 }
