@@ -4,7 +4,7 @@
  * @a: first integer argument
  * @b: second integer argument
  *
- * Return (0) success
+ * Return: (0) success
  */
 
 int mul(int a, int b)
