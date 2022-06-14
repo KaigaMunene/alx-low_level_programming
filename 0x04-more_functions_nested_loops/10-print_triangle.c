@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_triangle - Print a triangle whose size is user defined
  *
@@ -9,21 +10,21 @@
 
 void print_triangle(int size)
 {
-	if (size > 0)
-	{
-		int i, j;
+if (size > 0)
+{
+int i, j;
 
-		for (i = 1; i <= size; i++)
-		{
-			for (j = 1; j <= size; j++)
-			{
-				j > size - i ? _putchar('#') : _putchar(' ');
-			}
-			_putchar('\n');
-		}
-	}
-	else
-	{
-		_putchar('\n');
-	}
+for (i = 1; i <= size; i++)
+{
+for (j = 1; j <= size; j++)
+{
+j > size - i ? _putchar('#') : _putchar(' ');
+}
+_putchar('\n');
+}
+}
+else
+{
+_putchar('\n');
+}
 }
