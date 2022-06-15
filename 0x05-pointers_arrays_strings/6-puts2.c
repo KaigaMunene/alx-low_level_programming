@@ -17,6 +17,6 @@ if (i % print_every == 0)
 {
 _putchar(str[i]);
 }
-_putchar('\n');
 }
+_putchar('\n');
 }
