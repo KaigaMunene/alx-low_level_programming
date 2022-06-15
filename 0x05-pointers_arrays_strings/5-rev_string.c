@@ -3,7 +3,7 @@
 /**
  * rev_string - function that reverses a string
  *
- * @s - pointer to the string that is to be reversed
+ * @s: Pointer to the string that is to be reversed
  *
  * Return: None
  */
