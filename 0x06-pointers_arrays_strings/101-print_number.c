@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_number - function that prints an integer
@@ -11,30 +10,16 @@
 
 void print_number(int n)
 {
-unsigned int a, b, count, tmp, pow;
-
-a = n;
-pow = b = 1;
+unsigned int num = n;
 
 if (n < 0)
 {
-a = a * -1;
-putchar('_');
+_putchar('-');
+num = -num;
 }
-tmp = a;
 
-while (tmp > 9)
-{
-b++;
-tmp = tmp / 10;
-}
-for (count = 1; count < b; count++)
-pow = pow * 10;
+if ((num / 10) > 0)
+print_number(num / 10);
 
-while (pow > 1)
-{
-putchar((a / pow) % 10 + '0');
-pow = pow / 10;
-}
-putchar(a % 10 + '0');
+_putchar((num % 10) + '0');
 }
