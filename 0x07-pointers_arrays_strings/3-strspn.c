@@ -6,7 +6,7 @@
  * @s: segment to return bytes from
  * @accept: the bytes to include
  *
- * Return: number of bytes in the initial segment of s which consist only of bytes from accept
+ * Return: number of bytes in the segment s which consist of bytes from accept
  *
  */
 
