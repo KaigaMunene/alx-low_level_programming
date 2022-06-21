@@ -1,8 +1,9 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strpbrk - function that searches a string for any set of bytes
- * @s: the string to search 
+ * @s: the string to search
  * @accept: the bytes to search for
  *
  * Return: a pointer to the byte in s that matches one of the bytes in accept
@@ -22,5 +23,5 @@ return (s);
 }
 s++;
 }
-return (Null);
+return (NULL);
 }
