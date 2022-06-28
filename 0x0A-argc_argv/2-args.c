@@ -3,9 +3,10 @@
 
 /**
  * main - a program that prints all arguments it receives
+ * @argc: Argument count
+ * @argv: vector of arguments
  *
- *
- * Return:
+ * Return: Always 0
  */
 
 int main(int argc, char** argv)
