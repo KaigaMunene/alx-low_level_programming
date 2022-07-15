@@ -2,9 +2,10 @@
 #include <stdio.h>
 
 /**
- * print_name - function that prints a name
- * @name: the name to be printed
- * @f: A pointer to a function that prints a name
+ * print_name - function that prints a name.
+ *
+ * @name: the name to be printed.
+ * @f: A pointer to a function that prints a name.
  * Return: void
  */
 
