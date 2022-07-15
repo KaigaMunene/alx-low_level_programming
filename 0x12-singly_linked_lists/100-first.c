@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+void on_start(void) __attribute__((constructor));
+
 /**
  * on_start   - Prints the string "Starting...\n"
  *
