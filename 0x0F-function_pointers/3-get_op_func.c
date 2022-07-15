@@ -1,11 +1,13 @@
 #include "3-calc.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * get_op_func - function that returns a function pointer.
  * @s: the string to be searched.
  * Return: a function pointer.
  */
+
 int (*get_op_func(char *s))(int, int)
 {
 op_t ops[] = {

@@ -36,3 +36,5 @@
 * You have to use atoi to convert arguments to int
 * You are not allowed to use any kind of loop
 * You are allowed to use a maximum of 3 if statements
+
+100-main_opcodes.c - a program that prints the opcodes of its own main function
