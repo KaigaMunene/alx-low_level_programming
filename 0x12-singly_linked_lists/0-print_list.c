@@ -12,14 +12,10 @@ size_t count = 0;
 
 while (h != NULL)
 {
-if (h->str == NULL)
-printf("(nil)");
-else
-printf("%s", h->str);
-if (h->next != NULL)
-printf(" -> ");
-h = h->next;
+h->str != NULL ? printf("[%d] %s\n", h->len, h->str) :
+printf("[0] %s\n", "(nil)");
 count++;
+h = h->next;
 }
 return (count);
 }
