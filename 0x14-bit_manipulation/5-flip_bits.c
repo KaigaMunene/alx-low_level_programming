@@ -5,19 +5,20 @@
  * @n: number to flip
  * @m: number to flip
  *
- * Return: void
+ * Return: number of bits needed to flip to turn n into m
  */
-void flip_bits(unsigned long int *n, unsigned long int *m)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-unsigned long int i;
+int i = 0;
+unsigned long int num = (n ^ m);
 
-i = 0;
-while (i < sizeof(unsigned long int) * 8)
+while (num)
 {
-if (get_bit(*n, i) == get_bit(*m, i))
-set_bit(n, i);
-else
-clear_bit(n, i);
+if (num & 1)
+{
 i++;
 }
+num >>= 1;
+}
+return (i);
 }
