@@ -8,17 +8,20 @@
  */
 void print_binary(unsigned long int n)
 {
-unsigned long int mask = 1;
-unsigned long int i;
+unsigned long int mask = 1, i = 0;
 
-i = 0;
-while (i < sizeof(unsigned long int) * 8)
+while (n >> i)
 {
-if ((n & mask) == 0)
-_putchar('0');
-else
-_putchar('1');
-mask = mask << 1;
 i++;
+}
+
+if (i > sizeof(long int) * 8)
+{
+i = (sizeof(long int) * 8) - 1;
+}
+
+while (i--)
+{
+_putchar(((mask << i) &n) ? '1' : '0');
 }
 }
