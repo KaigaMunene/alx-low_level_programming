@@ -2,31 +2,38 @@
 
 /**
  * delete_nodeint_at_index - delete a node at a given index
- * @head: head of the list
- * @index: index of the node to delete
- * Return: the address of the new node
+ * @head: linked list to delete node at index from
+ * @index: index value of the node to delete
+ * Return: 1 if success, 0 if failed
  */
-listint_t *delete_nodeint_at_index(listint_t **head, unsigned int index)
-{
-listint_t *tmp, *tmp2;
-unsigned int i;
 
-if (head == NULL || *head == NULL)
-return (NULL);
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
+{
+listint_t *target, *current = *head;
+
+if (*head == NULL)
+return (-1);
 if (index == 0)
 {
-tmp = *head;
+target = current;
 *head = (*head)->next;
-free(tmp);
-return (*head);
+free(target);
+
+return (1);
 }
-tmp = *head;
-for (i = 0; tmp != NULL && i < index - 1; i++)
-tmp = tmp->next;
-if (tmp == NULL)
-return (NULL);
-tmp2 = tmp->next;
-tmp->next = tmp2->next;
-free(tmp2);
-return (*head);
+while (--index)
+{
+if (current->next != NULL)
+{
+current = current->next;
+}
+else
+{
+return (-1);
+}
+}
+target = current->next;
+current->next = target->next;
+free(target);
+return (1);
 }
