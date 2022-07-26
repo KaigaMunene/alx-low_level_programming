@@ -17,7 +17,7 @@ char *buffer;
 buffer = malloc(sizeof(char) * 1024);
 if (buffer == NULL)
 {
-dprintf(STDERR_FILENO, "Error: malloc failed\n");
+dprintf(STDERR_FILENO, "Error: malloc Can't write to %s\n, file");
 exit(99);
 }
 return (buffer);
@@ -35,6 +35,7 @@ c = close(fd);
 if (c == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+exit(100);
 }
 }
 
@@ -51,7 +52,7 @@ dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
  * If file_to or filr_from cannot be closed - exit code 100
  *
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 int fd_from, fd_to, r, w;
 char *buffer;
@@ -88,5 +89,6 @@ fd_to = open(argv[2], O_WRONLY | O_APPEND);
 free(buffer);
 close_file(fd_from);
 close_file(fd_to);
+
 return (0);
 }
