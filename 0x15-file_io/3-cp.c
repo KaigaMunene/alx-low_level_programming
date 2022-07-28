@@ -19,7 +19,8 @@ buffer = malloc(sizeof(char) * 1024);
 
 if (buffer == NULL)
 {
-dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
+dprintf(STDERR_FILENO,
+"Error: Can't write to %s\n", file);
 exit(99);
 }
 return (buffer);
@@ -37,7 +38,8 @@ c = close(fd);
 
 if (c == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+dprintf(STDERR_FILENO,
+"Error: Can't close fd %d\n", fd);
 exit(100);
 }
 }
